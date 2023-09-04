@@ -1,0 +1,12 @@
+location: uksouth
+serviceplan: basic
+sbNamespace:
+tags:
+  teamName:
+  applicationName:
+  builtFrom:
+  businessArea:
+  environment:
+resourceGroup:
+setup:
+  queues: {}
