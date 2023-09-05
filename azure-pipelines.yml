@@ -24,8 +24,8 @@ jobs:
       chartName: postgresql
       chartReleaseName: chart-postgresql-ci
       chartNamespace: chart-tests
-      helmDeleteWait: "360"
-      helmInstallWait: "360"
+      helmDeleteWait: "10"
+      helmInstallWait: "10"
 
 - job: Release
   # Make sure we have a tag to run this job
