@@ -12,7 +12,6 @@ spec:
   owner:
     name: {{ required "A Flexible postgres server( $flexibleserver ) is required" $flexibleserver }}
   azureName: {{ template "hmcts.releasename.v2" $base }}-{{ $database.name }}
-  charset: "utf8"
-  connectionLimit: "1000"
+  charset: utf8
   {{- end }}
 {{- end }}
