@@ -1,12 +1,4 @@
 location: uksouth
-serviceplan: basic
-sbNamespace:
-tags:
-  teamName:
-  applicationName:
-  builtFrom:
-  businessArea:
-  environment:
-resourceGroup:
+flexibleserver:
 setup:
-  queues: {}
+  databases: {}

@@ -1,4 +1,4 @@
-name: chart-servicebus pipeline
+name: chart-postgresql pipeline
 trigger:
   branches:
     include:
@@ -21,8 +21,8 @@ jobs:
   steps:
   - template: steps/charts/validate.yaml@cnp-library
     parameters :
-      chartName: servicebus
-      chartReleaseName: chart-servicebus-ci
+      chartName: postgresql
+      chartReleaseName: chart-postgresql-ci
       chartNamespace: chart-tests
       helmDeleteWait: "360"
       helmInstallWait: "360"
@@ -40,6 +40,6 @@ jobs:
   steps:
   - template: steps/charts/release.yaml@cnp-library
     parameters:
-      chartName: servicebus
-      chartReleaseName: chart-servicebus
+      chartName: postgresql
+      chartReleaseName: chart-postgresql
       chartNamespace: chart-tests

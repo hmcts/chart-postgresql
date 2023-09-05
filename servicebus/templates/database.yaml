@@ -1,0 +1,18 @@
+{{- $base := . -}}
+{{- $flexibleserver := .Values.flexibleserver -}}
+{{- if .Values.setup.databases -}}
+  {{- range $database := .Values.setup.databases }}
+---
+apiVersion: dbforpostgresql.azure.com/v1api20210601
+kind: FlexibleServersDatabase
+metadata:
+  name: {{ template "hmcts.releasename.v2" $base }}-{{ $database.name }}
+  {{- ( include "hmcts.labels.v2" $base ) | indent 2 }}
+spec:
+  owner:
+    name: {{ required "A Flexible postgres server( $flexibleserver ) is required" $flexibleserver }}
+  azureName: {{ template "hmcts.releasename.v2" $base }}-{{ $database.name }}
+  charset: utf8
+  connectionLimit: 1000
+  {{- end }}
+{{- end }}

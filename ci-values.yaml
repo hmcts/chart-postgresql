@@ -1,26 +1,5 @@
-resourceGroup: chart-tests-aso-preview-rg
-sbNamespace: chart-tests-servicebus
-tags:
-  teamName: ""
-  applicationName: ""
-  builtFrom: ""
-  businessArea: ""
-  environment: ""
+flexibleserver: chart-tests-flexibleserver-postgres-preview
 location: uksouth
-serviceplan: standard
 setup:
-  queues:
-   - name: chartqueue3
-   - name: chartqueue4
-  topics:
-   - name: charttopic1
-     subscriptionNeeded: yes
-   - name: charttopic2
-
-global:
-  tags:
-    teamName: "Software Engineering"
-    applicationName: "core"
-    builtFrom: "https://github.com/hmcts/chart-servicebus"
-    businessArea: "CFT"
-    environment: "development"
+  databases:
+   - name: db1
