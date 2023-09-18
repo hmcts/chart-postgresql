@@ -5,17 +5,11 @@ This chart is intended for adding the postgres sql databases.
 ## Prerequisites
 
 - To use this chart, you need a postgres Flexible server created beforehand.
-- Please see [this](https://github.com/hmcts/cnp-flux-config/blob/master/apps/sscs/preview/aso/sscs-postgres.yaml) link where the Flexible server is deployed using ASO.
+- Please see [cnp-flux-config](https://github.com/hmcts/cnp-flux-config/pull/24968) PR link where the Flexible server is deployed using ASO.
 
 ## Example configuration
 
-```yaml
-flexibleserver: "<flexible server name>"
-location: uksouth
-setup:
-  databases:
-   - name: "<name of the database>"
-```
+Please see example PR [chart-ccd](https://github.com/hmcts/chart-ccd/pull/278)
 
 ### Pull Request Validation
 
