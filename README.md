@@ -1,4 +1,4 @@
-# chart-
+# chart-postgresql
 [![Build Status](https://dev.azure.com/hmcts/PlatformOperations/_apis/build/status/chart-postgresql)](https://dev.azure.com/hmcts/PlatformOperations/_build?definitionId=856)
 This chart is intended for adding the postgres sql databases.
 
