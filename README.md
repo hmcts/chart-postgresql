@@ -9,8 +9,15 @@ This chart is intended for adding the postgres sql databases.
 
 ## Example configuration
 
-Please see example PR [chart-ccd](https://github.com/hmcts/chart-ccd/pull/278)
+```yaml
+flexibleserver: "<flexible server name>"
+location: uksouth
+setup:
+  databases:
+   - name: "<name of the database>"
+```
 
+Please see example PR [chart-ccd](https://github.com/hmcts/chart-ccd/pull/278)
 ### Pull Request Validation
 
 A build is triggered when pull requests are created. This build will run `helm lint`, deploy the chart using `ci-values.yaml` and run `helm test`.
