@@ -5,7 +5,7 @@ This chart is intended for adding the postgres sql databases.
 ## Prerequisites
 
 - To use this chart, you need a postgres Flexible server created beforehand.
-- Please see [cnp-flux-config](https://github.com/hmcts/cnp-flux-config/pull/24968) PR link where the Flexible server is deployed using ASO.
+- Please see [cnp-flux-config](https://github.com/hmcts/cnp-flux-config/pull/25165) PR link where the Flexible server is deployed using ASO.
 
 ## Example configuration
 
