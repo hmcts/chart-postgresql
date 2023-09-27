@@ -5,8 +5,8 @@ This chart is intended for adding the postgres sql databases.
 ## Prerequisites
 
 - To use this chart, you need a postgres Flexible server created beforehand.
-- Please see [cnp-flux-config](https://github.com/hmcts/cnp-flux-config/pull/25165) PR link where the Flexible server is deployed using ASO.
-- Please follow this documentation for generating the [PosgreSQL secret](https://github.com/hmcts/cnp-flux-config/blob/master/docs/secrets-sops-encryption.md) and see below for an example:
+- See [cnp-flux-config](https://github.com/hmcts/cnp-flux-config/pull/25165) PR link where the Flexible server is deployed using ASO.
+- Follow this documentation for generating the [PosgreSQL secret](https://github.com/hmcts/cnp-flux-config/blob/master/docs/secrets-sops-encryption.md) and see below for an example:
 ```bash
 brew install sops
 ```
