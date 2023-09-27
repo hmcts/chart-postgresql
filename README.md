@@ -8,7 +8,7 @@ This chart is intended for adding the postgres sql databases.
 - Please see [cnp-flux-config](https://github.com/hmcts/cnp-flux-config/pull/25165) PR link where the Flexible server is deployed using ASO.
 - Please follow this documentation for generating [ASO secret](https://github.com/hmcts/cnp-flux-config/blob/master/docs/secrets-sops-encryption.md)
 - Simple Example to generate ASO secret and encrypt
-```
+```bash
 brew install sops
 ```
 
