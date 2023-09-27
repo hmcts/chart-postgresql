@@ -14,7 +14,9 @@ brew install sops
 ```bash
 NAMESPACE=probate # adjust this for your Kubernetes namespace
 PASSWORD=$(LC_ALL=C tr -dc 'A-Za-z0-9' </dev/urandom | head -c 16 ; echo)
-kubectl create secret generic postgres -n $NAMESPACE --from-literal=PASSWORD=${PASSWORD} --type=Opaque -o yaml --dry-run=client > postgres.enc.yaml
+kubectl create secret generic postgres \
+  -n $NAMESPACE --from-literal=PASSWORD=${PASSWORD} --type=Opaque -o yaml \
+   --dry-run=client > postgres.enc.yaml
 
 
 KEY=https://dcdcftappsdemokv.vault.azure.net/keys/sops-key/7a5cc0c79b02466c86bc594c431e00f7
