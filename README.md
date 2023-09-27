@@ -15,7 +15,6 @@ brew install sops
 ```
 kubectl create secret generic <secret name> -n <namespace> --from-literal=<key>=<value> --type=Opaque -o yaml --dry-run=client > <name of the file>
 
-kubectl create secret generic prometheus-values -n sscs --from-literal=PASSWORD=fjfuyry7e --type=Opaque -o yaml --dry-run=client > demo-postgres.enc.yaml
 
 sops --encrypt --azure-kv https://dcdcftappsdemokv.vault.azure.net/keys/sops-key/7a5cc0c79b02466c86bc594c431e00f7 --encrypted-regex "^(data|stringData)$" --in-place demo-postgres.enc.yaml
 ```
