@@ -12,7 +12,7 @@ This chart is intended for adding the postgres sql databases.
 brew install sops
 ```
 
-```
+```bash
 NAMESPACE=probate # adjust this for your Kubernetes namespace
 PASSWORD=$(LC_ALL=C tr -dc 'A-Za-z0-9' </dev/urandom | head -c 16 ; echo)
 kubectl create secret generic postgres -n $NAMESPACE --from-literal=PASSWORD=${PASSWORD} --type=Opaque -o yaml --dry-run=client > postgres.enc.yaml
