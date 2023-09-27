@@ -6,7 +6,19 @@ This chart is intended for adding the postgres sql databases.
 
 - To use this chart, you need a postgres Flexible server created beforehand.
 - Please see [cnp-flux-config](https://github.com/hmcts/cnp-flux-config/pull/25165) PR link where the Flexible server is deployed using ASO.
+- Please follow this documentation for generating [ASO secret](https://github.com/hmcts/cnp-flux-config/blob/master/docs/secrets-sops-encryption.md)
+- Simple Example to generate ASO secret and encrypt
+```
+brew install sops
+```
 
+```
+kubectl create secret generic <secret name> -n <namespace> --from-literal=<key>=<value> --type=Opaque -o yaml --dry-run=client > <name of the file>
+
+kubectl create secret generic prometheus-values -n sscs --from-literal=PASSWORD=fjfuyry7e --type=Opaque -o yaml --dry-run=client > demo-postgres.enc.yaml
+
+sops --encrypt --azure-kv https://dcdcftappsdemokv.vault.azure.net/keys/sops-key/7a5cc0c79b02466c86bc594c431e00f7 --encrypted-regex "^(data|stringData)$" --in-place demo-postgres.enc.yaml
+```
 ## Example configuration
 
 ```yaml
