@@ -6,7 +6,7 @@
 apiVersion: dbforpostgresql.azure.com/v1api20210601
 kind: FlexibleServersDatabase
 metadata:
-  name: {{ $database.name }}
+  name: {{ $database.name | replace "_" "-" }}
   {{- ( include "hmcts.labels.v2" $base ) | indent 2 }}
 spec:
   owner:
