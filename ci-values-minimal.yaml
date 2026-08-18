@@ -1,0 +1,5 @@
+# Fed into: kubeconform
+flexibleserver: my-postgres-server # required by database owner ref
+setup:
+  databases:
+    - name: mydb # exercises the database rendering code path
